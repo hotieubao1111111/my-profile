@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIÊN HỆ BÊN DƯỚI ĐỀ ĐƯỢC HỔ TRỢ | Glass Profile</title>
+  <title>TRÙM HỖ TRỢ MXH | Glass Profile</title>
   <meta name="description" content="Profile cá nhân phong cách glassmorphism" />
   <style>
     :root {
@@ -179,7 +179,50 @@
     .admin-user{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
     .danger-btn{padding:10px 12px;border:none;border-radius:14px;background:rgba(255,80,80,.18);color:#fff;cursor:pointer}
     .status-line{margin-top:10px;font-size:14px;color:var(--sub)}
-
+    /* QR Zalo style */
+    .qr-container {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .qr-card {
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 280px;
+    }
+    .qr-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+      background: rgba(255,255,255,.15);
+    }
+    .qr-card img {
+      width: 180px;
+      height: 180px;
+      border-radius: 24px;
+      margin: 12px 0;
+      background: white;
+      padding: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .qr-card div {
+      font-weight: 700;
+      font-size: 18px;
+      background: linear-gradient(135deg, #fff, #a0f0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .qr-card span {
+      font-size: 13px;
+      color: var(--sub);
+      display: block;
+      margin-top: 8px;
+    }
     @media (max-width:860px){.app{grid-template-columns:1fr}.hero{grid-template-columns:1fr;text-align:center}.avatar-shell{margin:0 auto}.auth-grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.topbar{padding:12px 14px}.topbar-brand{width:100%;text-align:center}.topbar-nav{justify-content:center}}
   </style>
 </head>
@@ -199,7 +242,7 @@
 
   <main class="app">
     <nav class="topbar card">
-      <div class="topbar-brand">BAO CHAU PROFILE</div>
+      <div class="topbar-brand">TRÙM HỖ TRỢ MXH</div>
       <div class="topbar-nav">
   <a class="nav-chip" href="#authSection" onclick="document.getElementById('authSection').scrollIntoView({behavior:'smooth'}); return false;">🔐 Đăng ký / Đăng nhập</a>
   <a class="nav-chip" href="#socialResources" onclick="document.getElementById('socialResources').scrollIntoView({behavior:'smooth'}); return false;">🌐 Liên hệ Zalo & Telegram</a>
@@ -212,11 +255,11 @@
       <div class="avatar-shell"><div class="avatar"><img src="anh.jpg" /></div></div>
       <div>
         <div class="hello-wrap"><span id="helloTyping" class="hello"></span></div>
-        <h1><span class="name-rgb">NGUYỄN HỮU BẢO CHÂU</span></h1>
+        <h1><span class="name-rgb">TRÙM HỖ TRỢ MXH</span></h1>
       </div>
     </section>
 
-    <!-- LINKS: CHỈ GIỮ LẠI ZALO & TELEGRAM -->
+    <!-- LINKS: ZALO & TELEGRAM + QR ZALO -->
     <section class="card section" id="socialResources">
       <h2>📱 Liên hệ trực tiếp</h2>
       <div class="link-list">
@@ -245,6 +288,16 @@
           </div>
           <span>↗</span>
         </a>
+      </div>
+
+      <!-- QR Zalo bổ sung -->
+      <div class="qr-container">
+        <div class="qr-card">
+          <div>📲 Quét mã Zalo</div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fzaloapp.com%2Fqr%2Fp%2F1wota0fm1dbi7" alt="QR Code Zalo">
+          <span>Mở Zalo > Quét mã > Nhắn tin ngay</span>
+          <span style="font-size:12px; margin-top:6px;">Hoặc bấm vào link Zalo bên trên</span>
+        </div>
       </div>
     </section>
 

@@ -165,21 +165,6 @@
     #time{font-size:42px;font-weight:800}
     #date{color:var(--sub)}
     .value{font-size:28px;font-weight:800;margin-top:8px}
-    .auth-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .auth-box{padding:16px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
-    .auth-box h3{margin-bottom:12px;font-size:18px}
-    .auth-form{display:grid;gap:10px}
-    .auth-input{width:100%;padding:12px 14px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.08);color:#fff;outline:none}
-    .auth-input::placeholder{color:rgba(255,255,255,.5)}
-    .auth-btn{padding:12px 14px;border:none;border-radius:16px;background:rgba(255,255,255,.14);color:#fff;font-weight:700;cursor:pointer}
-    .auth-btn:hover{background:rgba(255,255,255,.2)}
-    .auth-note{font-size:13px;color:var(--sub);line-height:1.5}
-    .admin-panel{display:none;grid-column:1/-1}
-    .admin-list{display:grid;gap:10px;margin-top:12px}
-    .admin-user{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
-    .danger-btn{padding:10px 12px;border:none;border-radius:14px;background:rgba(255,80,80,.18);color:#fff;cursor:pointer}
-    .status-line{margin-top:10px;font-size:14px;color:var(--sub)}
-    /* QR Zalo style */
     .qr-container {
       margin-top: 24px;
       display: flex;
@@ -223,7 +208,7 @@
       display: block;
       margin-top: 8px;
     }
-    @media (max-width:860px){.app{grid-template-columns:1fr}.hero{grid-template-columns:1fr;text-align:center}.avatar-shell{margin:0 auto}.auth-grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.topbar{padding:12px 14px}.topbar-brand{width:100%;text-align:center}.topbar-nav{justify-content:center}}
+    @media (max-width:860px){.app{grid-template-columns:1fr}.hero{grid-template-columns:1fr;text-align:center}.avatar-shell{margin:0 auto}.resource-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr}.topbar{padding:12px 14px}.topbar-brand{width:100%;text-align:center}.topbar-nav{justify-content:center}}
   </style>
 </head>
 <body>
@@ -244,12 +229,10 @@
     <nav class="topbar card">
       <div class="topbar-brand">TRÙM HỖ TRỢ MXH</div>
       <div class="topbar-nav">
-  <a class="nav-chip" href="#authSection" onclick="document.getElementById('authSection').scrollIntoView({behavior:'smooth'}); return false;">🔐 Đăng ký / Đăng nhập</a>
-  <a class="nav-chip" href="#socialResources" onclick="document.getElementById('socialResources').scrollIntoView({behavior:'smooth'}); return false;">🌐 Liên hệ Zalo & Telegram</a>
-  <a class="nav-chip" href="#codeResources" onclick="document.getElementById('codeResources').scrollIntoView({behavior:'smooth'}); return false;">💻 Code</a>
-  <a class="nav-chip" href="#gameResources" onclick="document.getElementById('gameResources').scrollIntoView({behavior:'smooth'}); return false;">🎮 Acc game</a>
-  <a class="nav-chip" href="./quiz.html">📝 Trắc nghiệm</a>
-</div>
+        <a class="nav-chip" href="#socialResources" onclick="document.getElementById('socialResources').scrollIntoView({behavior:'smooth'}); return false;">🌐 Liên hệ Zalo & Telegram</a>
+        <a class="nav-chip" href="#codeResources" onclick="document.getElementById('codeResources').scrollIntoView({behavior:'smooth'}); return false;">💻 Code</a>
+        <a class="nav-chip" href="./quiz.html">📝 Trắc nghiệm</a>
+      </div>
     </nav>
     <section class="card hero">
       <div class="avatar-shell"><div class="avatar"><img src="anh.jpg" /></div></div>
@@ -316,28 +299,7 @@
       </div>
     </section>
 
-      <!-- COUNTDOWN -->
-    <section class="card section">
-      <h2>Đếm ngược thi THPT Quốc gia</h2>
-      <div class="mini" style="display:grid;gap:14px">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-          <div>
-            <div style="font-size:14px;color:var(--sub)">Mốc đang đếm</div>
-            <div id="examTargetLabel" style="font-size:20px;font-weight:700">11/06/2026 00:00</div>
-          </div>
-          <div style="padding:10px 14px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--sub)">Kỳ thi tốt nghiệp THPT 2026</div>
-        </div>
-        <div class="weather-grid">
-          <div class="mini"><div>Ngày</div><div class="value" id="cdDays">--</div></div>
-          <div class="mini"><div>Giờ</div><div class="value" id="cdHours">--</div></div>
-          <div class="mini"><div>Phút</div><div class="value" id="cdMinutes">--</div></div>
-          <div class="mini"><div>Giây</div><div class="value" id="cdSeconds">--</div></div>
-        </div>
-        <div id="examStatus" style="font-size:14px;color:var(--sub)">Đang tải đếm ngược...</div>
-      </div>
-    </section>
-
-      <!-- CONTROL PANEL -->
+    <!-- CONTROL PANEL -->
     <section class="card section" id="codeResources">
       <h2>Tài nguyên code & điều chỉnh</h2>
       <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:16px">
@@ -376,63 +338,6 @@
             <div class="product-title">Template landing page nâng cấp</div>
             <div class="product-price">499.000đ</div>
             <div class="product-note">Phù hợp để giới thiệu dịch vụ, dự án cá nhân hoặc trưng bày sản phẩm với giao diện nổi bật.</div>
-            <button class="buy-btn" onclick="handleBuy()">Mua qua Telegram</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-      <section class="card section" id="authSection">
-      <h2>Tài khoản</h2>
-      <div class="auth-grid">
-        <div class="auth-box">
-          <h3>Đăng ký</h3>
-          <div class="auth-form">
-            <input class="auth-input" id="registerUsername" placeholder="Tên tài khoản" />
-            <input class="auth-input" id="registerPassword" type="password" placeholder="Mật khẩu" />
-            <button class="auth-btn" id="registerBtn">Tạo tài khoản</button>
-          </div>
-          <div class="status-line" id="registerStatus">Tạo tài khoản để đăng nhập trên web này.</div>
-        </div>
-
-        <div class="auth-box">
-          <h3>Đăng nhập</h3>
-          <div class="auth-form">
-            <input class="auth-input" id="loginUsername" placeholder="Tên tài khoản" />
-            <input class="auth-input" id="loginPassword" type="password" placeholder="Mật khẩu" />
-            <button class="auth-btn" id="loginBtn">Đăng nhập</button>
-            <button class="auth-btn" id="logoutBtn" type="button">Đăng xuất</button>
-          </div>
-          <div class="status-line" id="loginStatus">Chưa đăng nhập.</div>
-        </div>
-
-        <div class="auth-box admin-panel" id="adminPanel">
-          <h3>Quản trị viên</h3>
-          <div class="auth-note">Tài khoản admin mặc định: <b>admin</b> / <b>admin123</b>. Đây là bản demo chạy trên GitHub Pages bằng localStorage, không phù hợp cho hệ thống thật.</div>
-          <div class="admin-list" id="adminUserList"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card section" id="gameResources">
-      <h2>Danh mục acc game</h2>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-thumb"><img src="game-product-1.jpg" alt="Acc game 1"></div>
-          <div class="product-body">
-            <div class="product-title">Acc game mẫu VIP 01</div>
-            <div class="product-price">150.000đ</div>
-            <div class="product-note">Ghi chú: có thể thay bằng mô tả sản phẩm, rank, vật phẩm nổi bật hoặc thông tin bạn muốn hiển thị.</div>
-            <button class="buy-btn" onclick="handleBuy()">Mua qua Telegram</button>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-thumb"><img src="game-product-2.jpg" alt="Acc game 2"></div>
-          <div class="product-body">
-            <div class="product-title">Acc game mẫu hiếm 02</div>
-            <div class="product-price">320.000đ</div>
-            <div class="product-note">Ghi chú: thêm tình trạng tài khoản, skin, level, server hoặc các chi tiết quan trọng của sản phẩm.</div>
             <button class="buy-btn" onclick="handleBuy()">Mua qua Telegram</button>
           </div>
         </article>
@@ -602,39 +507,7 @@
       document.getElementById('wind').textContent=Math.round(d.current.wind_speed_10m)+' km/h';
     });
 
-    // exam countdown
-    const examTarget = new Date('2026-06-11T00:00:00+07:00');
-    const examLabel = document.getElementById('examTargetLabel');
-    const examStatus = document.getElementById('examStatus');
-    examLabel.textContent = '11/06/2026 00:00';
-
-    function updateExamCountdown(){
-      const now = new Date();
-      const diff = examTarget - now;
-
-      if(diff <= 0){
-        document.getElementById('cdDays').textContent = '00';
-        document.getElementById('cdHours').textContent = '00';
-        document.getElementById('cdMinutes').textContent = '00';
-        document.getElementById('cdSeconds').textContent = '00';
-        examStatus.textContent = 'Đã tới ngày bắt đầu kỳ thi rồi. Cố lên nhé!';
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
-      document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('cdMinutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('cdSeconds').textContent = String(seconds).padStart(2, '0');
-      examStatus.textContent = 'Đếm ngược tới ngày thi đầu tiên.';
-    }
-    updateExamCountdown();
-    setInterval(updateExamCountdown, 1000);
-  // volume control
+    // volume control
     const music = document.getElementById('bgMusic');
     const volume = document.getElementById('volume');
     volume.addEventListener('input',()=>{
@@ -687,134 +560,10 @@
     introScreen.addEventListener('click', startMusic);
     introScreen.addEventListener('touchstart', startMusic, { passive: true });
 
-    // AUTH DEMO (localStorage)
-    const STORAGE_KEY = 'bc_demo_users_v1';
-    const SESSION_KEY = 'bc_demo_session_v1';
-    const DEFAULT_ADMIN = { username: 'admin', password: 'admin123', role: 'admin' };
-
-    function getUsers(){
-      const users = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      if(!users.find(u => u.username === DEFAULT_ADMIN.username)){
-        users.push(DEFAULT_ADMIN);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
-      }
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    }
-
-    function saveUsers(users){
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(users));
-    }
-
-    function setSession(user){
-      localStorage.setItem(SESSION_KEY, JSON.stringify({ username: user.username, role: user.role || 'user' }));
-    }
-
-    function getSession(){
-      return JSON.parse(localStorage.getItem(SESSION_KEY) || 'null');
-    }
-
-    function clearSession(){
-      localStorage.removeItem(SESSION_KEY);
-    }
-
-    const registerBtn = document.getElementById('registerBtn');
-    const loginBtn = document.getElementById('loginBtn');
-    const logoutBtn = document.getElementById('logoutBtn');
-    const registerStatus = document.getElementById('registerStatus');
-    const loginStatus = document.getElementById('loginStatus');
-    const adminPanel = document.getElementById('adminPanel');
-    const adminUserList = document.getElementById('adminUserList');
-
-    function renderAdmin(){
-      const session = getSession();
-      const users = getUsers();
-      if(session && session.role === 'admin'){
-        adminPanel.style.display = 'grid';
-        adminUserList.innerHTML = users.map(user => `
-          <div class="admin-user">
-            <div>
-              <div><b>${user.username}</b></div>
-              <div class="auth-note">Vai trò: ${user.role || 'user'}</div>
-            </div>
-            ${user.username !== 'admin' ? `<button class="danger-btn" onclick="deleteUser('${user.username}')">Xóa</button>` : '<span class="auth-note">Khóa</span>'}
-          </div>
-        `).join('');
-      }else{
-        adminPanel.style.display = 'none';
-        adminUserList.innerHTML = '';
-      }
-    }
-
-    function renderSession(){
-      const session = getSession();
-      if(session){
-        loginStatus.textContent = `Đang đăng nhập: ${session.username} (${session.role})`;
-      }else{
-        loginStatus.textContent = 'Chưa đăng nhập.';
-      }
-      renderAdmin();
-    }
-
-    window.deleteUser = function(username){
-      const session = getSession();
-      if(!session || session.role !== 'admin') return;
-      const users = getUsers().filter(user => user.username !== username);
-      saveUsers(users);
-      renderAdmin();
-    }
-
-    registerBtn.addEventListener('click', () => {
-      console.log('register click');
-      const username = document.getElementById('registerUsername').value.trim();
-      const password = document.getElementById('registerPassword').value.trim();
-      if(!username || !password){
-        registerStatus.textContent = 'Vui lòng nhập đủ tài khoản và mật khẩu.';
-        return;
-      }
-      const users = getUsers();
-      if(users.find(user => user.username.toLowerCase() === username.toLowerCase())){
-        registerStatus.textContent = 'Tên tài khoản đã tồn tại.';
-        return;
-      }
-      users.push({ username, password, role: 'user' });
-      saveUsers(users);
-      registerStatus.textContent = 'Tạo tài khoản thành công.';
-      document.getElementById('registerUsername').value = '';
-      document.getElementById('registerPassword').value = '';
-      renderAdmin();
-    });
-
-    loginBtn.addEventListener('click', () => {
-      const username = document.getElementById('loginUsername').value.trim();
-      const password = document.getElementById('loginPassword').value.trim();
-      const user = getUsers().find(u => u.username === username && u.password === password);
-      if(!user){
-        loginStatus.textContent = 'Sai tài khoản hoặc mật khẩu.';
-        return;
-      }
-      setSession(user);
-      renderSession();
-      document.getElementById('loginPassword').value = '';
-    });
-
-    // BUY CHECK LOGIN
+    // BUY (no login required now)
     window.handleBuy = function(){
-      const session = getSession();
-      if(!session){
-        alert('Bạn cần đăng nhập để mua sản phẩm!');
-        document.getElementById('authSection').scrollIntoView({behavior:'smooth'});
-        return;
-      }
       window.open('https://t.me/mmo2026s','_blank','noopener');
     };
-
-    logoutBtn.addEventListener('click', () => {
-      clearSession();
-      renderSession();
-    });
-
-    getUsers();
-    renderSession();
 
   </script>
 </body>
